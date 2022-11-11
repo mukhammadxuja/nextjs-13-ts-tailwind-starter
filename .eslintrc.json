@@ -1,13 +1,18 @@
 {
   "env": {
     "browser": true,
-    "es2021": true
+    "es2021": true,
+    "jest": true,
+    "node": true
   },
   "extends": [
     "airbnb",
     "plugin:react/recommended",
     "plugin:@next/next/recommended",
-    "prettier"
+    "prettier",
+    "plugin:jest/recommended",
+    "plugin:jest-dom/recommended",
+    "plugin:testing-library/react"
   ],
   "parserOptions": {
     "ecmaFeatures": {
@@ -18,7 +23,6 @@
   },
   "plugins": ["prettier", "react", "testing-library"],
   "overrides": [
-    // Only uses Testing Library lint rules in test files
     {
       "files": [
         "**/__tests__/**/*.[jt]s?(x)",
